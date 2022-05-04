@@ -13,7 +13,7 @@ body {
 }
 
 #formulario {
-  background: url("/src/img/pngwing.com.png");
+  background: url("src/img/pngwing.com.png");
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -247,7 +247,7 @@ form > label {
 }
 
 .boxModalResposta {
-  background: url("/src/img/pngwing.com.png");
+  background: url("src/img/pngwing.com.png");
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
