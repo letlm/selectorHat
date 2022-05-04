@@ -1,0 +1,368 @@
+body {
+  background-image: url(https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80);
+  min-width: 300px;
+  font-family: "JetBrains Mono", monospace;
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#formulario {
+  background: url("/src/img/pngwing.com.png");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: rgb(75, 21, 5);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-flow: column;
+  width: 390px;
+  height: 490px;
+  padding: 90px;
+  border-radius: 20px;
+  align-items: center;
+  opacity: 0.9;
+}
+
+#elementos {
+  margin-top: -20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#elementos > img {
+  width: 95px;
+}
+
+#elementosDentro {
+  width: 190px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+}
+
+span {
+  color: #000000;
+  text-align: center;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form > label {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  font-size: 18px;
+  width: 300px;
+  color: rgb(0, 0, 0);
+}
+
+.field {
+  width: 250px;
+  margin-bottom: 1rem;
+  outline: none;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 12px;
+  border: 2px solid transparent;
+  text-align: center;
+}
+
+#regras {
+  cursor: pointer;
+  background-color: #5c3c36;
+  width: 100px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  margin-top: 10px;
+  border: 2px solid black;
+  border-radius: 9px;
+  color: white;
+  z-index: 2000;
+  font-size: 18px;
+}
+
+#regras:hover {
+  background-color: #680202;
+  transition: 0.5s;
+  opacity: 0.7;
+}
+
+#novaPergunta {
+  cursor: pointer;
+  background-color: #5c3c36;
+  width: 210px;
+  height: 35px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  border: 2px solid black;
+  color: white;
+  font-size: 15px;
+  z-index: 2000;
+  border-radius: 4px;
+}
+
+#novaPergunta:hover {
+  background-color: #ce8c0c;
+  transform: scale(1.1);
+  transition: all 0.5s;
+  box-shadow: 10px 10px 20px rgba(238, 229, 229, 0.8);
+}
+
+#chapeu {
+  transition: all 400ms ease;
+  all: unset;
+  cursor: pointer;
+  outline: revert;
+  animation: bounce 1s infinite alternate;
+  -webkit-animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+
+#chapeu > img {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.mostrarModal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(31, 83, 44, 0.5);
+  color: #000000;
+  font-size: 15px;
+  font-weight: bold;
+  position: fixed;
+  top: 0px;
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.aparecer {
+  display: flex;
+}
+
+.boxModal {
+  background-color: #88888e;
+  width: 300px;
+  height: 450px;
+  padding: 20px;
+  border: 4px solid #4a90cd;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.boxModal > h2 {
+  border: 2px solid #ce8c0c;
+  background-color: #ce8c0c;
+  border-radius: 40px;
+  margin-top: -10px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 17px;
+  text-align: center;
+}
+
+.boxModal > ol {
+  margin-top: 20px;
+  text-align: center;
+}
+.fechar {
+  margin-top: 40px;
+  border: 2px solid white;
+  background-color: #195075;
+  border-radius: 4px;
+  color: white;
+  font-family: "JetBrains Mono", monospace;
+  cursor: pointer;
+}
+
+.mostrarModalResposta {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(59, 33, 16, 0.5);
+  font-size: 15px;
+  position: fixed;
+  top: 0px;
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  animation: anima 3s;
+}
+
+@keyframes cairModal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.aparecer .boxModalResposta {
+  animation: cairModal 0.4s;
+}
+
+.aparecer {
+  display: flex;
+}
+
+.boxModalResposta {
+  background: url("/src/img/pngwing.com.png");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  width: 390px;
+  height: 490px;
+  padding: 90px;
+  border-radius: 20px;
+  align-items: center;
+}
+
+#brasaoModal {
+  width: 80px;
+  margin-top: 10px;
+}
+
+#chapeuResposta {
+  margin-top: -10px;
+  width: 120px;
+}
+
+#perguntaEscrita {
+  color: rgb(63, 35, 1);
+  width: 200px;
+  text-align: center;
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+#gerarResposta {
+  width: 290px;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.fecharResposta {
+  position: absolute;
+  margin-top: -50px;
+  margin-right: 20px;
+  margin-left: 260px;
+  border: 2px solid rgb(0, 0, 0);
+  background-color: #5c3c36;
+  border-radius: 4px;
+  color: white;
+  font-family: "JetBrains Mono", monospace;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  #formulario {
+    width: 500px;
+    height: 600px;
+  }
+
+  #elementos > img {
+    width: 110px;
+    margin-right: 50px;
+  }
+
+  #elementosDentro {
+    width: 200px;
+  }
+
+  form > img {
+    margin-top: -50px;
+    width: 100px;
+    height: 160px;
+  }
+
+  .field {
+    width: 350px;
+    font-size: 18px;
+  }
+
+  #chapeu > img {
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .mostrarModal {
+    font-size: 15px;
+  }
+
+  .mostrarModalResposta {
+    font-size: 15px;
+  }
+
+  .boxModalResposta {
+    width: 500px;
+    height: 600px;
+  }
+
+  .fecharResposta {
+    margin-right: -30px;
+  }
+
+  #brasaoModal {
+    width: 90px;
+    margin-top: -40px;
+    margin-bottom: 10px;
+  }
+
+  #chapeuResposta {
+    margin-top: 10px;
+    width: 140px;
+  }
+
+  #novaPergunta {
+    margin-top: 10px;
+  }
+}

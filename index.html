@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="src/styles/reset.css">
+    <link rel="stylesheet" href="src/styles/style.css">
+    <title>Selector Hat</title>
+</head>
+
+<body>
+  <main id="main">
+    <div id="formulario">
+      <div id="elementos">
+        <img src="/src/img/brasao.png" alt="brasao">
+        <div id="elementosDentro">
+          <h2>O Chapéu Seletor irá definir a sua sorte!</h2>
+          <button id="regras">Regras</button>
+        </div>
+
+      </div>
+      <form name="pergunta">
+        <label for="nome">Digite a sua pergunta e o chapéu seletor irá responde-lá!</label>
+        <input type="text" name="nome" placeholder="Não escreva coisas estúpidas!" class="field" required />
+        <button id="chapeu">
+          <img src="src/img/chapeu.png">
+        </button>
+        
+      </form>
+    </div>
+    <div id="modalRegras" class="mostrarModal">
+      <div class="boxModal">
+        <h2>Como o chapéu seletor funciona?</h2>
+        <ol>
+          <li>Digite o que você gostaria de perguntar ou afirmar ao Chapéu Seletor no campo indicado.</li>
+          <li>Mentalize o que você gostaria de ter como resposta.</li>
+          <li>Clique no Chapéu Seletor para saber o que ele tem a dizer!</li>
+          <li>Para realizar outra pergunta/afirmação basta clicar em "Testar a sorte novamente!" e realizar os mesmos
+            passos lidos anteriormente!</li>
+        </ol>
+        <button class="fechar">Fechar</button>
+      
+    </div>
+  </main>
+   
+  <div id="modalRespostas" class="mostrarModalResposta">
+    <div class="boxModalResposta">
+      <img id="brasaoModal" src="/src/img/brasao.png" alt="brasao">
+      <span id="perguntaEscrita"> </span>
+      <img id="chapeuResposta"src="/src/img/chapeu.png">
+      <span id="gerarResposta"> </span>
+      <button id="novaPergunta" type="button">Testar a sorte novamente!</button>
+    </div>
+    
+  </div>
+  <script type="module" src="/src/script.js"></script>
+</body>
+
+</html>
+
+<!-- tophat Chapéu Seletor / Selector Hat
+O jogo "Chapéu Seletor" é inspirado na "Magic 8-ball. É um projeto HTML/CSS/JS feito em Programação Orientada a Objetos(POO), além de ser responsivo. O objetivo do jogo é o usuário escrever uma pergunta e o selector hat responder a partir de uma resposta que pode ser a que o usuário esperava, ou não! -->
